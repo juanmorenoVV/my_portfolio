@@ -14,10 +14,6 @@ export const content = {
     tech: { heading: "Stack tecnológico" },
     projects: {
       heading: "Proyectos",
-      published: "Publicado en Odoo App Store",
-      collaborators: "Construido con 2 colaboradores",
-      inProduction: "En producción",
-      inDevelopment: "En desarrollo",
       viewOn: "Ver en Odoo App Store",
       items: {
         sync: {
@@ -26,19 +22,19 @@ export const content = {
             "Conecta Google Sheets con los leads del CRM de Odoo de forma automática.",
         },
         margin: {
-          title: "Profit Margin",
+          title: "Price & Utility Optimizer",
           description:
-            "Añade un módulo de gestión de margen de ganancia a Odoo.",
+            "Automatiza el cálculo de precios y márgenes de ganancia con reglas de protección inteligentes en Odoo.",
         },
         cobranza: {
           title: "Cobranza PWA",
           description:
-            "Aplicación full-stack de gestión de cobranzas en producción. PWA offline-first, escritorio y móvil, despliegue en VPS e integración con ERP Profit.",
+            "Aplicación full-stack de gestión de cobranzas. PWA offline-first, escritorio y móvil, despliegue en VPS e integración con ERP Profit.",
         },
         agro: {
           title: "Agro App",
           description:
-            "Sistema robusto de gestión agrícola en desarrollo. Integración con ERP Profit, construido en solitario de principio a fin.",
+            "Sistema robusto de gestión agrícola. PWA offline-first con React y Next.js, despliegue con Docker y Nginx, integración con ERP Profit, construido en solitario de principio a fin.",
         },
       },
     },
@@ -46,13 +42,11 @@ export const content = {
       heading: "Experiencia",
       items: [
         {
-          period: "Actualidad",
           role: "Desarrollador Backend Freelance",
           detail:
             "Proyectos independientes, propiedad total del desarrollo e integraciones con ERP.",
         },
         {
-          period: "2023–2024",
           role: "Desarrollador Backend en [Empresa]",
           detail:
             "Módulos en Odoo 18/19, lógica fiscal venezolana (ISLR, dualidad monetaria).",
@@ -63,7 +57,10 @@ export const content = {
       heading: "Contacto",
       subtitle: "Hablemos sobre tu próximo proyecto.",
     },
-    footer: "Desarrollado con Next.js.",
+    footer: {
+      rightsReserved: "Todos los derechos reservados.",
+      builtWith: "Desarrollado con Next.js.",
+    },
   },
   en: {
     nav: { projects: "Projects", contact: "Contact" },
@@ -78,10 +75,6 @@ export const content = {
     tech: { heading: "Tech stack" },
     projects: {
       heading: "Projects",
-      published: "Published on Odoo App Store",
-      collaborators: "Built with 2 collaborators",
-      inProduction: "In production",
-      inDevelopment: "In development",
       viewOn: "View on Odoo App Store",
       items: {
         sync: {
@@ -90,19 +83,19 @@ export const content = {
             "Connects Google Sheets with Odoo CRM leads automatically.",
         },
         margin: {
-          title: "Profit Margin",
+          title: "Price & Utility Optimizer",
           description:
-            "Adds a profit margin management module to Odoo.",
+            "Automates price and profit margin calculations with smart protection rules in Odoo.",
         },
         cobranza: {
           title: "Cobranza PWA",
           description:
-            "Full-stack collections management app in production. Offline-first PWA, desktop and mobile, VPS deployment and ERP Profit integration.",
+            "Full-stack collections management app. Offline-first PWA, desktop and mobile, VPS deployment and ERP Profit integration.",
         },
         agro: {
           title: "Agro App",
           description:
-            "Robust agricultural management system under development. ERP Profit integration, built solo end-to-end.",
+            "Robust agricultural management system. Offline-first PWA with React and Next.js, Docker and Nginx deployment, ERP Profit integration, built solo end-to-end.",
         },
       },
     },
@@ -110,13 +103,11 @@ export const content = {
       heading: "Experience",
       items: [
         {
-          period: "Current",
           role: "Freelance Backend Developer",
           detail:
             "Independent projects, full ownership and ERP integrations.",
         },
         {
-          period: "2023–2024",
           role: "Backend Developer at [Company]",
           detail:
             "Odoo 18/19 modules, Venezuelan tax logic (ISLR, monetary duality).",
@@ -127,21 +118,9 @@ export const content = {
       heading: "Contact",
       subtitle: "Let's talk about your next project.",
     },
-    footer: "Built with Next.js.",
+    footer: {
+      rightsReserved: "All rights reserved.",
+      builtWith: "Built with Next.js.",
+    },
   },
 } as const
-
-export const techStack = [
-  { name: "Python", slug: "python" },
-  { name: "Node.js", slug: "nodedotjs" },
-  { name: "React", slug: "react" },
-  { name: "Next.js", slug: "nextdotjs" },
-  { name: "Docker", slug: "docker" },
-  { name: "Nginx", slug: "nginx" },
-  { name: "PostgreSQL", slug: "postgresql" },
-  { name: "MongoDB", slug: "mongodb" },
-  { name: "Odoo", slug: "odoo" },
-  { name: "ERP Profit", slug: "erp" },
-  { name: "PWA", slug: "pwa" },
-  { name: "Ubuntu VPS", slug: "ubuntu" },
-] as const

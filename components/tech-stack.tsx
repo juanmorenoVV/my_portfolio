@@ -2,8 +2,18 @@
 
 import { FadeIn } from "@/components/fade-in"
 import { useLanguage } from "@/components/language-provider"
-import { techStack } from "@/lib/i18n"
 import { SectionHeading } from "@/components/section-heading"
+
+const techStack = [
+  { name: "Python", slug: "python" },
+  { name: "Odoo", slug: "odoo" },
+  { name: "PostgreSQL", slug: "postgresql" },
+  { name: "Docker", slug: "docker" },
+  { name: "PWA", slug: "pwa" },
+  { name: "Linux", slug: "linux" },
+  { name: "FastAPI", slug: "fastapi" },
+  { name: "Git", slug: "git" },
+] as const
 
 export function TechStack() {
   const { t } = useLanguage()

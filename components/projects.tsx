@@ -8,7 +8,10 @@ import { FadeIn } from "@/components/fade-in"
 import { useLanguage } from "@/components/language-provider"
 import { SectionHeading } from "@/components/section-heading"
 
-const ODOO_URL = "https://apps.odoo.com/apps"
+const SYNC_LEADS_TO_SHEETS_URL =
+  "https://apps.odoo.com/apps/modules/19.0/sync_leads_to_sheets"
+const PRICE_UTILITY_OPTIMIZER_URL =
+  "https://apps.odoo.com/apps/modules/18.0/price_utility_optimizer"
 
 export function Projects() {
   const { t } = useLanguage()
@@ -19,26 +22,23 @@ export function Projects() {
       key: "sync",
       title: p.items.sync.title,
       description: p.items.sync.description,
-      image: "/projects/sync-sheets-to-leads.png",
-      meta: p.published,
+      image: "/projects/principal_image_sync_leads_to_sheets.png",
       tags: ["Odoo", "Python", "Google Sheets API"],
-      link: { label: p.viewOn, href: ODOO_URL },
+      link: { label: p.viewOn, href: SYNC_LEADS_TO_SHEETS_URL },
     },
     {
       key: "margin",
       title: p.items.margin.title,
       description: p.items.margin.description,
-      image: "/projects/profit-margin.png",
-      meta: `${p.published} · ${p.collaborators}`,
+      image: "/projects/principal_image_price_utility_optimizer.png",
       tags: ["Odoo", "Python"],
-      link: { label: p.viewOn, href: ODOO_URL },
+      link: { label: p.viewOn, href: PRICE_UTILITY_OPTIMIZER_URL },
     },
     {
       key: "cobranza",
       title: p.items.cobranza.title,
       description: p.items.cobranza.description,
       image: null,
-      meta: p.inProduction,
       tags: ["React", "Next.js", "Python", "Docker", "Nginx", "PWA", "ERP Profit"],
       link: null,
     },
@@ -47,8 +47,7 @@ export function Projects() {
       title: p.items.agro.title,
       description: p.items.agro.description,
       image: null,
-      meta: p.inDevelopment,
-      tags: ["Python", "React", "Docker", "ERP Profit"],
+      tags: ["Python", "React", "Next.js", "Docker", "Nginx", "PWA", "ERP Profit"],
       link: null,
     },
   ]
@@ -73,8 +72,7 @@ export function Projects() {
                   </div>
                 )}
                 <div className="flex flex-1 flex-col p-6">
-                  <p className="font-mono text-xs text-accent">{project.meta}</p>
-                  <h3 className="mt-2 text-lg font-semibold tracking-tight">
+                  <h3 className="text-lg font-semibold tracking-tight">
                     {project.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">

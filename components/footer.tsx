@@ -8,8 +8,10 @@ export function Footer() {
   return (
     <footer className="border-t border-border/60 px-6 py-8">
       <div className="mx-auto flex max-w-3xl items-center justify-between text-xs text-muted-foreground">
-        <span>© {new Date().getFullYear()} Juan Moreno</span>
-        <span className="font-mono">{t.footer}</span>
+        <span>
+          © {new Date().getFullYear()} {t.hero.name}. {t.footer.rightsReserved}
+        </span>
+        <span className="font-mono">{t.footer.builtWith}</span>
       </div>
     </footer>
   )
