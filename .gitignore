@@ -1,15 +1,95 @@
-# v0 sandbox internal files
+# --- Dependencias ---
+# Se reinstalan con `pnpm install`; subirlas infla el repo y no aporta valor.
+node_modules/
+
+# --- Next.js ---
+# Carpeta de build y caché de desarrollo; se regenera con `pnpm dev` / `pnpm build`.
+.next/
+out/
+
+# --- Variables de entorno ---
+# Pueden contener claves API, tokens y secretos. Nunca deben ir al repo.
+.env
+.env.*
+!.env.example
+
+# --- Logs y depuración ---
+# Archivos temporales de npm/pnpm/yarn al instalar o depurar.
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# --- TypeScript ---
+# Caché incremental de compilación; se regenera al compilar.
+*.tsbuildinfo
+
+# --- Linting y formateo ---
+# Cachés locales de ESLint, Prettier y Stylelint.
+.eslintcache
+.prettiercache
+.stylelintcache
+
+# --- Testing ---
+# Reportes de cobertura generados al correr tests.
+coverage/
+.nyc_output/
+
+# --- Despliegue (Vercel) ---
+# Config local del CLI de Vercel (project id, tokens de enlace).
+.vercel/
+
+# --- v0 (generador del proyecto) ---
+# Artefactos internos del sandbox de v0; no forman parte de tu app.
 __v0_runtime_loader.js
 __v0_devtools.tsx
 __v0_jsx-dev-runtime.ts
 .snowflake/
 .v0-trash/
-.vercel/
 
-# Environment variables
-.env*.local
-
-# Common ignores
-node_modules
-.next/
+# --- Sistema operativo ---
+# Metadatos de macOS y Windows que no aportan al código.
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# --- Editores e IDEs ---
+# Configuración personal del editor; cada dev la tiene distinta.
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Cursor: reglas y ajustes locales del IDE (no el código del proyecto).
+.cursor/
+
+# VS Code: ignora todo excepto extensiones/recomendaciones compartidas del equipo.
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json.example
+
+# --- Certificados y claves ---
+# Archivos PEM suelen ser certificados SSL o claves privadas.
+*.pem
+
+# --- Turbopack / Turbo (si se usa en el futuro) ---
+.turbo/
+
+# --- Miscelánea ---
+# Archivos temporales y de respaldo del sistema o editores.
+*.log
+*.tmp
+*.temp
+*.bak
+*.orig
